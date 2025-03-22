@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bakong KHQR Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+      <h1>Select an amount:</h1>
+      <div class="button-container">
+        <button class="amountButton" data-amount="100" data-value="1">
+          <img src="1.png" alt="1" />
+          <span>100៛</span>
+        </button>
+        <button class="amountButton" data-amount="200" data-value="2">
+          <img src="2.png" alt="2" />
+          <span>200៛</span>
+        </button>
+        <button class="amountButton" data-amount="300" data-value="3">
+          <img src="3.png" alt="3" />
+          <span>300៛</span>
+        </button>
+        <button class="amountButton" data-amount="400" data-value="4">
+          <img src="4.png" alt="4" />
+          <span>400៛</span>
+        </button>
+        <button class="amountButton" data-amount="500" data-value="5">
+          <img src="5.png" alt="5" />
+          <span>500៛</span>
+        </button>
+        <button class="amountButton" data-amount="600" data-value="6">
+          <img src="6.png" alt="6" />
+          <span>600៛</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- QR Code Page -->
+    <div id="qrPage" class="page">
+      <div id="qrFrame">
+        <div id="qrHeader">KHQR</div>
+        <div id="qrUser">Factory.io</div>
+        <div id="qrAmount">ID<span id="qrValue"></span></div>
+        <div id="qrCodeContainer"></div>
+      </div>
+      <div id="countdownContainer">
+        <p>QR expires in: <span id="qrCountdown">60</span>s</p>
+      </div>
+    </div>
+
+    <!-- Thank You Page -->
+    <div id="thankYouPage" class="page">
+      <div class="message-container active">
+        <h2>Thank you!</h2>
+        <p>Returning home in <span id="thankYouCountdown">6</span>s...</p>
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

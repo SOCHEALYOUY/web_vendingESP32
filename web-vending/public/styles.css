@@ -1,0 +1,187 @@
+/* ------------------- */
+/* General Variables  */
+/* ------------------- */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f8f9fa;
+  --success-color: #28a745;
+  --danger-color: red;
+  --button-hover-scale: 1.1;
+  --transition-speed: 0.2s ease;
+  --border-radius: 10px;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------- */
+/* General Styles     */
+/* ------------------- */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: var(--secondary-color);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ------------------- */
+/* Button Component   */
+/* ------------------- */
+.amountButton {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  background-color: #f0f8ff;
+  cursor: pointer;
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.amountButton:hover {
+  transform: scale(var(--button-hover-scale));
+  box-shadow: var(--box-shadow);
+}
+
+.amountButton img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.amountButton span {
+  display: block;
+  margin-top: 5px;
+}
+
+/* ------------------- */
+/* Page Management    */
+/* ------------------- */
+.page {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------- */
+/* QR Code Component  */
+/* ------------------- */
+#qrFrame {
+  background-color: #ddc7c7;
+  padding: 1px;
+  border-radius: 1px;
+  border: 4px solid #ddc7c7;
+  display: inline-block;
+  position: relative;
+  color: white;
+  text-align: center;
+  width: 210px;
+}
+
+#qrHeader {
+  background: var(--danger-color);
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+#qrUser {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#qrAmount {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--success-color);
+  margin-bottom: 10px;
+}
+
+#qrCodeContainer {
+  background: white;
+  padding: 1px;
+  border-radius: 1px;
+  margin: 1px auto;
+  display: inline-block;
+}
+
+#countdownContainer {
+  font-size: 18px;
+  color: #0c0c0c;
+  margin-top: 20px;
+}
+
+/* ------------------- */
+/* Thank You Page     */
+/* ------------------- */
+#thankYouPage .message-container {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#thankYouPage h2 {
+  color: var(--success-color);
+  margin-bottom: 20px;
+}
+
+/* ------------------- */
+/* Countdown Styling  */
+/* ------------------- */
+#qrCountdown,
+#thankYouCountdown {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--success-color);
+}
+
+/* ------------------- */
+/* QR Canvas          */
+/* ------------------- */
+#qrCodeContainer canvas {
+  margin: 0 auto;
+  display: block;
+}
