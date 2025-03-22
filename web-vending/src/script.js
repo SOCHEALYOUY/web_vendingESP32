@@ -58,3 +58,5 @@ document.querySelectorAll(".amountButton").forEach((button) => {
     }
   });
 });
+
+console.log("Hi");
